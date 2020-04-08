@@ -3,6 +3,8 @@
 #include <locale.h>
 #include <stdbool.h>
 
+/* Minha dupla: Victor Gabriel de Oliveira e Caio Augusto Exteckoetter */
+
 struct calcado{
     int codigo;
     char marca[50];
@@ -27,7 +29,7 @@ void incluirNovoCalcado(){
 
         for(int i = 0; i < x; i++){
 
-        printf("\n\tProduto %d", i+1);
+        printf("\n\tProduto");
 
         printf("\nCódigo: ");
         scanf("%d", &calcade[i].codigo);
@@ -50,14 +52,14 @@ void incluirNovoCalcado(){
         int v = 0;
         printf("\nQuantos calçados quer incluir? ");
         scanf("%d", &v);
-
+        int aux = x;
         x += v;
 
         calcade = (struct calcade *) realloc(calcade, x * sizeof(struct calcado));
 
-        for(int i = 0; i < v; i++){
+        for(int i = aux; i < x; i++){
 
-        printf("\n\tProduto %d", i+1);
+        printf("\n\tProduto");
 
         printf("\nCódigo: ");
         scanf("%d", &calcade[i].codigo);
